@@ -1,0 +1,32 @@
+s1=input("Enter first string:")
+s2=input("Enter second string:")
+if(sorted(s1)==sorted(s2)):
+      print("The strings are anagrams.")
+else:
+      print("The strings aren't anagrams.")
+
+
+
+# Check the given number is palindrome or not??
+number=int(input("enter as number"))
+temp=number
+rev=0
+while(number>0):
+    rem=number%10
+    rev=rev*10+rem
+    number=number//10
+if(temp==rev):
+    print("palindrome")
+else:
+    print("not palindrome")
+
+start=int(input("enter a start number"))
+end=int(input("enter a ending number"))
+for num in range(start,end+1):
+    if num>1:
+        for n in range(2,num):
+            if (num%n)==0:
+                break
+        else:
+                print(num)
+
