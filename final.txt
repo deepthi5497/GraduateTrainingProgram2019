@@ -1,0 +1,83 @@
+1.Create user defined exceptino for capturing image files which is .jpg, .jpeg, .png etc.,
+class Filename(Exception):
+    pass
+def filetype(i):
+    lis=['.jpg','.png','.gif','.jpeg']
+    if i in lis:
+        raise Filename
+    else:
+        print("this is not correct format file")
+try:
+    a=input("please enter filename")
+    filetype(a[1])
+except Filename as f:
+    print("enter correct file")
+
+
+
+-------------------------------------------------------------------
+2.Create simple banking process using class and function
+
+class Bank:
+    def __init__(self,username,userid):
+        self.usename = username
+        self.userid= userid
+
+
+    def newuser(self,balance):
+        self.balance=balance+1000
+        print(self.usename)
+        print(self.userid)
+        print(self.balance)
+
+a=Bank('xyz','101')
+a.newuser(1000)
+---------------------------------------------------------------
+4.Read the IP Addresses from the file using regular expression
+
+import re
+string1="this is my ip address 100.100.100.100"
+a=re.search('\d{1,3}\.\d.{1,3}\.\d.{1,3}.\d.\d{1,3}',string1)
+print(a)
+
+
+------------------------------------------------------------------------------
+3.Create student information file (xlsx format) from database.
+import mysql.connector
+database=mysql.connect(localhost="localhost",username="xyz",password="root")
+cursor=db.cursor()
+query="create table student(id integer(5),name varchar(30))"
+cursor.execute(query)
+fh=open("studenttable.txt","r")
+for i in fh.readlines():
+insert into student(id,name) values("%d","%s")"%(fh.readline())
+query2="select * from student"
+output=cursor.execute(query2)
+result=output.fetchall()
+for j in result:
+fw=open("studentdetails.xlsx",w)
+fw.write(j)
+
+-----------------------------------------------
+5.Convert number to words range will be 9999
+
+Example:
+
+1000 - one thousand
+
+1750 - one thousand seven hundred fifty
+
+4881 - four thousand eight hundred eighty one
+
+
+singledigit={1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine"}
+doubledigit={11:"eleven",12:"tweleve",13:"thirteen",14:"fourteen",15:"fifteen",16:"sixteen",17:"seventeen",18:"eighteen",19:"nineteen"}
+multiples={10:"ten",20:"twenty",30:"thirty",40:"fourty",50:"fifty",60:"sixty",70:"seventy",80:"eighty",90:"ninety"}
+thriples={100:"hundred",1000:"thousand"}
+num=int(input("enter a number"))
+
+
+
+
+
+
