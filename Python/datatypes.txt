@@ -94,6 +94,34 @@ for x in list1:
       print("present")
     else:
       print("not")
+
+
+string1=input("enter")
+a=string1.upper()
+b=string1.lower()
+print(a,b)
+"""14. Write a Python program that accepts a comma separated sequence of words as input and prints the unique words in sorted form (alphanumerically)."""
+string1=input("enter:").split(",")
+a=list(set(string1))
+a.sort()
+print(a)
+"""17. Write a Python function to get a string made of 4 copies of the last two characters of a specified string (length must be at least 2)"""
+string1=input("enter")
+res=string1[-2:]
+print(res*4)
+""". Write a Python function to convert a given string to all uppercase if it contains at least 2 uppercase characters in the first 4 characters."""
+string1=input("enter string:")
+count=0
+for i in string1[:4]:
+  if i.isupper():
+    count=count+1
+# print(count)
+if count>=2:
+  res=string1.upper()
+  print(res)
+else:
+  print(string1)
+
  
 
  
